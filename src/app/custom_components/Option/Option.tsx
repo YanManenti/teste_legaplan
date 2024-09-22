@@ -9,9 +9,11 @@ type OptionProps = Readonly<{
 
 export default function Option({ text, onFinish, onDelete }: OptionProps) {
   return (
-    <div className="flex flex-row justify-between items-center gap-4 dashedBorder py-4 px-4 min-w-[450px]">
+    <div className="flex flex-row justify-between items-center gap-4 dashedBorder py-4 px-4 min-w-[450px] hover:cursor-pointer hover:bg-none">
       <Checkmark onChange={onFinish} />
-      <p className="text-[length:--textSize] w-full">{text}</p>
+      <p className="text-[length:--textSize] w-full font-[--normalWeight]">
+        {text}
+      </p>
       <Trash
         color="#B0BBD1"
         onClick={onDelete}
