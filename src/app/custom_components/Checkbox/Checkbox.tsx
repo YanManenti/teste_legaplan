@@ -1,16 +1,13 @@
 "use client";
 
-import { useState } from "react";
-
 type CheckboxProps = Readonly<{
-  onChange: () => void;
+  onChange: (e: boolean) => void;
+  checked?: boolean;
 }>;
 
-export default function Checkbox({ onChange }: CheckboxProps) {
-  const [checked, setChecked] = useState(false);
+export default function Checkbox({ onChange, checked }: CheckboxProps) {
   const handleChange = () => {
-    onChange();
-    setChecked(!checked);
+    onChange(!checked);
   };
   return (
     <div className="relative h-6 w-6">

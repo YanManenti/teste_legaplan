@@ -1,24 +1,30 @@
-import { Trash } from "lucide-react";
 import Checkmark from "../Checkbox/Checkbox";
 
 type OptionProps = Readonly<{
   text: string;
-  onFinish: () => void;
-  onDelete: () => void;
+  checked: boolean;
+  setChecked: (e: boolean) => void;
+  deleteComponent: React.ReactNode;
 }>;
 
-export default function Option({ text, onFinish, onDelete }: OptionProps) {
+export default function Option({
+  text,
+  checked,
+  setChecked,
+  deleteComponent,
+}: OptionProps) {
   return (
-    <div className="flex flex-row justify-between items-center gap-4 dashedBorder py-4 px-4 min-w-[450px] hover:cursor-pointer hover:bg-none">
-      <Checkmark onChange={onFinish} />
-      <p className="text-[length:--textSize] w-full font-[--normalWeight]">
+    <div className="flex flex-row justify-between items-center gap-4 dashedBorder p-4 w-full max-w-[450px] hover:cursor-pointer hover:bg-none">
+      <Checkmark onChange={setChecked} checked={checked} />
+      <p
+        className={`text-[length:--textSize] w-full font-[--normalWeight] text-wrap break-all select-none ${
+          checked ? "line-through text-[--secondary]" : ""
+        } `}
+      >
         {text}
       </p>
-      <Trash
-        color="#B0BBD1"
-        onClick={onDelete}
-        className="hover:stroke-[#d30707] hover:cursor-pointer right-0"
-      />
+
+      {deleteComponent}
     </div>
   );
 }
