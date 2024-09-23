@@ -72,14 +72,14 @@ export default function Home() {
           height={"36"}
           alt="business logo"
         />
-        <h1 className="text-[length:--titleSize] font-medium h-fit sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2">
+        <h1 className="text-[length:--titleSize] font-medium h-fit sm:justify-between lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2">
           Bem-vindo de volta, Marcus
         </h1>
         <h3 className="text-[--secondary] text-[length:--textSize] font-[--normalWeight] h-fit">
           {capitalizedWeekday}, {day} de {month} de {year}
         </h3>
       </div>
-      <div className="my-8 px-2 sm:px-8 flex flex-col gap-6 w-full max-w-[450px] overflow-y-auto max-h-[calc(100vh-56px-157px-48px-64px)]">
+      <div className="my-6 sm:my-10 px-2 sm:px-8 flex flex-col gap-6 w-full max-w-[450px] overflow-y-auto max-h-[calc(100vh-56px-157px-48px-64px)]">
         <h3 className="text-[--secondary] text-[length:--textSize] font-[--normalWeight] h-fit w-full text-center">
           Suas tarefas hoje
         </h3>

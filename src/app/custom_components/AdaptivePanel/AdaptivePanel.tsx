@@ -56,7 +56,7 @@ export default function AdaptivePanel({
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
-      <DialogContent className="sm:max-w-[425px] p-8 flex flex-col gap-8">
+      <DialogContent className="sm:max-w-[450px] p-8 flex flex-col gap-8 shadow-dialogShadow">
         <DialogTitle>{title}</DialogTitle>
         <DialogDescription className="hidden">
           Fixed the warning
