@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "undefined/subscriptions/323aacb1-2c74-4d3a-96b9-38c1bb976e9d/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/TesteLegaplan",
+  "appService.deploySubpath": "."
+}
